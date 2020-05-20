@@ -1,0 +1,192 @@
+@import url("fonts.css");
+::-moz-selection { /* Code for Firefox */
+  color: inherit;
+  background: transparent;
+}
+::selection {
+  color: inherit;
+  background: transparent;
+}
+ul{
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 16px;
+}
+.task-container{
+    position: relative;
+    width: 250px;
+    height: 250px;
+/*    border: 3px solid RGBA(97, 106, 113, .3);*/
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .4s;
+    transform: scale(1);
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.1);
+}
+.task-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.task-content.completed-task{
+/*    background-color: beige;*/
+    opacity: .5;
+}
+.task-content.completed-task:hover{
+/*    transform: scale(1);*/
+}
+.confetti-container{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 80%;
+}
+.confetti{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 80%;
+    background-image: url(../images/confetti.gif);
+}
+.completed-task .check-btn{
+    border-color: greenyellow;
+}
+.completed-task .task{
+    text-decoration: line-through;
+}
+.task-container:hover{
+    transition: .4s;
+    transform: scale(1.03);
+}
+.task{
+    overflow: scroll;
+    height: 170px;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 2px solid RGBA(97, 106, 113, .2);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: left;
+    color: RGBA(64, 78, 95, 1.00);
+/*    word-spacing: .3em;*/
+    font-family: 'Work Sans', sans-serif;
+}
+
+.top-items{
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+/*    background-color:red;*/
+    color: RGBA(97, 106, 113, 1.00);
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Sen', sans-serif;
+    font-size: 1.1em;
+}
+.bottom-items{
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+.finish-by{
+/*    color: darkseagreen;*/
+/*    color:RGBA(86, 118, 225, 1.00);*/
+    color: slategrey;
+    font-family: 'Sen', sans-serif;
+}
+button.check-btn{
+    float: right;
+    margin-top: 3px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid RGBA(97, 106, 113, 1.00);
+    background-color: transparent;
+}
+button.check-btn.checked{
+    background-image: url(../images/done.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+button.check-btn:focus{
+    outline: none;
+}
+.priority{
+    
+}
+.priority-bar{
+    width: 40px;
+    height: 3px;
+    position: absolute;
+    right: 0px;
+    top: 26px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.high{
+    background-color: RGBA(252, 91, 93, 1.00);
+    -webkit-box-shadow: 0px 0px 3px 2px RGBA(252, 91, 93, .13);
+    -moz-box-shadow: 0px 0px 3px 2px RGBA(252, 91, 93, .13);
+    box-shadow: 0px 0px 3px 2px RGBA(252, 91, 93, .13);
+}
+/*
+.high::after{
+    position: absolute;
+    content: 'high';
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .8em;
+    color: RGBA(252, 91, 93, 1.00);
+}
+*/
+.med{
+    background-color: RGBA(86, 118, 225, 1.00);
+    -webkit-box-shadow: 0px 0px 3px 2px RGBA(86, 118, 225, .13);
+    -moz-box-shadow: 0px 0px 3px 2px RGBA(86, 118, 225, .13);
+    box-shadow: 0px 0px 3px 2px RGBA(86, 118, 225, .13);
+}
+/*
+.med::after{
+    position: absolute;
+    content: 'med';
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .8em;
+    color: RGBA(86, 118, 225, 1.00);
+}
+*/
+.low{
+    background-color: RGBA(249, 232, 62, 1.00);
+    -webkit-box-shadow: 0px 0px 3px 2px RGBA(249, 232, 62, .13);
+    -moz-box-shadow: 0px 0px 3px 2px RGBA(249, 232, 62, .13);
+    box-shadow: 0px 0px 3px 2px RGBA(249, 232, 62, .13);
+}
+/*
+.low::after{
+    position: absolute;
+    content: 'low';
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .8em;
+    color: RGBA(250, 190, 90, 1.00);
+}*/

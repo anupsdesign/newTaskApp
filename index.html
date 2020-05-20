@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="Style/style.css">
+      <link rel="stylesheet" href="Style/fonts.css">
+    <title></title>
+  </head>
+  <body>
+      <div class="scrollbar" id="style-14">
+          <div class="force-overflow"></div>
+      </div>
+      <ul>
+          <li>
+              <div class="task-container">
+                  <div class="task-content">
+                      <div class="confetti-container"></div>
+                      <div class="top-items">
+                          <span class="priority">Priority</span>
+                          <span class="priority-bar high"></span>
+                      </div>
+                      <div class="task">
+                          <h4>Start android class project</h4>
+                      </div>
+                      <div class="bottom-items">
+                          <span class="finish-by">by 8AM tomorrow</span>
+                          <button class="check-btn"></button>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div class="task-container">
+                  <div class="task-content">
+                      <div class="confetti-container"></div>
+                      <div class="top-items">
+                          <span class="priority">Priority</span>
+                          <span class="priority-bar med"></span>
+                      </div>
+                      <div class="task">
+                          <h4>Watch Net Ninja's node js tutorial</h4>
+                      </div>
+                      <div class="bottom-items">
+                          <span class="finish-by">by 8AM tomorrow</span>
+                          <button class="check-btn"></button>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div class="task-container">
+                  <div class="task-content">
+                      <div class="confetti-container"></div>
+                      <div class="top-items">
+                          <span class="priority">Priority</span>
+                          <span class="priority-bar low"></span>
+                      </div>
+                      <div class="task">
+                          <h4>Get some rest</h4>
+                      </div>
+                      <div class="bottom-items">
+                          <span class="finish-by">by 8AM tomorrow</span>
+                          <button class="check-btn"></button>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          
+      </ul>
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script>
+          $('.task-container').one("click",function(){
+              $('.check-btn',this).addClass('checked')
+              $('.confetti-container').addClass('confetti')
+              $(".confetti-container",this).show().delay(1000).fadeOut()
+              $(".task-content",this).addClass('completed-task')
+//              $('.trash-container',this).css("display","block")
+          })
+      </script>
+  </body>
+</html>
